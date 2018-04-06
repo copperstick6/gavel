@@ -16,10 +16,10 @@ assets = Environment(app)
 assets.config['pyscss_style'] = 'expanded'
 assets.url = app.static_url_path
 scss = Bundle(
-    'css/style.scss',
-    depends='**/*.scss',
-    filters=('pyscss',),
-    output='all.css'
+	'css/style.scss',
+	depends='**/*.scss',
+	filters=('pyscss',),
+	output='all.css'
 )
 assets.register('scss_all', scss)
 
@@ -39,8 +39,8 @@ import gavel.controllers # registers controllers
 # send usage stats
 import gavel.utils
 gavel.utils.send_telemetry('gavel-boot', {
-    'base-url': settings.BASE_URL or '',
-    'min-views': settings.MIN_VIEWS,
-    'timeout': settings.TIMEOUT,
-    'disable-email': settings.DISABLE_EMAIL
+	'base-url': settings.BASE_URL or '',
+	'min-views': settings.MIN_VIEWS,
+	'timeout': settings.TIMEOUT,
+	'disable-email': settings.DISABLE_EMAIL
 })

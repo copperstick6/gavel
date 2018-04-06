@@ -41,14 +41,14 @@ secret_key: null
 #####################
 # Optional Settings #
 #####################
-
+# can also configure Gavel to use SendGrid to send emails
+# Set use_sendgrid to be true. Default value is false
+# also, add in your API key. Default value for that is None.
+use_sendgrid: null
+sendgrid_api_key: null
 # can also be specified as the 'DATABASE_URL' or 'DB_URI' environment variable
 # defaults to 'postgresql://localhost/gavel'
 db_uri: null
-
-# can also be specified as the 'REDIS_URL' or 'BROKER_URI' environment variable
-# defaults to 'redis://localhost:6379/0'
-broker_uri: null
 
 # can also be specified as the 'PORT' environment variable
 # defaults to '5000'
@@ -125,9 +125,6 @@ email_auth_mode: null
 # https://www.google.com/settings/security/lesssecureapps. if at any point,
 # your account gets locked, visiting this link may help:
 # http://www.google.com/accounts/DisplayUnlockCaptcha.
-#
-# see the troubleshooting guide for more help:
-# https://github.com/anishathalye/gavel/wiki/Troubleshooting
 email_host: null
 
 # can also be specified as the 'EMAIL_PORT' environment variable
